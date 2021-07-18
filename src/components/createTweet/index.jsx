@@ -37,7 +37,7 @@ export default function CreateTweet({ onTweetAdded }) {
       profilePics: user.profilePics,
     };
 
-    const header = { "Content-Type": "application/json", Authorization: token };
+    const header = { "Content-Type": "application/json",};
 
     const result = await fetch(url, {
       method: "post",

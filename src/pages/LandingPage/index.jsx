@@ -15,9 +15,7 @@ export default function LandingPage() {
   const { isLoggerIn } = useAuth();
 
   const changeSplashdisp = () => {
-    setTimeout(() => {
-      setSplashDisp("none");
-    }, 2500);
+    window.onload = () => setSplashDisp("none");
   }
 
   if(!isLoggerIn) {
@@ -33,13 +31,10 @@ export default function LandingPage() {
 
   function BtnClicked(ev) {
     const path = ev.target.textContent.toLowerCase();
-    console.log(path);
+    // console.log(path);
     history.push(`/${path}`);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM loaded");
-  })
 
   return (
     <>

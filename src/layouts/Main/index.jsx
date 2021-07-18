@@ -31,15 +31,15 @@ export default function Main() {
 
       const result = await fetch(url).then((e) => e.json());
 
-      console.log(result.data);
+      // console.log(result.data);
       setTweets(result.data);
     } catch (error) {
-      console.log("An error occurred, try again");
+      alert("An error occurred, try again");
     }
   }
 
   useEffect(() => {
-    console.log(isTweetAdded);
+    // console.log(isTweetAdded);
     if (isLoggerIn) {
       getTweets();
     }
