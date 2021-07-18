@@ -1,0 +1,26 @@
+.misc {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  word-wrap: normal;
+  font-size: 14px;
+
+
+  div {
+    width: auto;
+  }
+
+  div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.copywrite {
+  padding: 10px 0 2px;
+  font-size: initial;
+}

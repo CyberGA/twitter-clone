@@ -1,0 +1,75 @@
+@import "../../index.scss";
+
+.wrapper {
+  display: flex;
+  border-bottom: 12px solid rgb(222, 222, 222);
+  padding: 12px 12px 0;
+  gap: 8px;
+
+  .dpContainer {
+    height: 100%;
+  }
+}
+.createTweet {
+  width: 100%;
+
+  textarea {
+    width: 100%;
+    resize: none;
+    padding: 12px;
+    border: none;
+    overflow: hidden;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.createTweetsForm {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+
+  button {
+    color: #fff;
+    background: $color;
+    padding: 10px 15px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 600ms;
+    font-weight: 700;
+    margin-block: auto;
+
+    &:hover {
+      background: rgba($color-deep, $alpha: 0.8);
+    }
+  }
+
+  .tweetIcons {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.tweetIcon {
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 450ms;
+
+  &:hover {
+    background: rgba($color, $alpha: 0.2);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+
+    .iconChild {
+      fill: $color;
+    }
+  }
+}

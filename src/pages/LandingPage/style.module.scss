@@ -1,0 +1,87 @@
+@import "../../index.scss";
+
+.wrapper {
+  display: grid;
+  height: 100%;
+  // grid-template-rows: 9fr 1fr;
+  grid-template-rows: auto;
+}
+.container {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.magazine {
+  margin: 0;
+  height: 100vh;
+  max-height: 600px;
+  background-image: url("../../assets/images/twitter-home.png");
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  background: #fff;
+  padding: 20px 20px 5px;
+  text-align: center;
+}
+
+.pane {
+  width: 50%;
+  padding: 20px 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.signupFrame,
+.loginFrame {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 450ms;
+}
+.signupFrame {
+  background-color: $color;
+  color: #fff;
+
+  &:hover {
+    background: $color-deep;
+  }
+}
+.loginFrame {
+  border: 3px solid $color;
+  color: $color;
+
+  &:hover {
+    background: rgba($color-deep, $alpha: 0.4);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .signupFrame,
+  .loginFrame {
+    padding: 10px;
+  }
+
+  .footer {
+    position: relative;
+  }
+}

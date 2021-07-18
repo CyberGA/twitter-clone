@@ -1,0 +1,115 @@
+@import "../../index.scss";
+
+.post-wrapper {
+  margin: 10px 0px;
+  background-color: #f3f3f325;
+  padding: 5px 15px;
+  border-bottom: 1px solid rgb(225, 221, 221);
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.bioContainer {
+  width: 100%;
+}
+
+.profileSpan {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  .userDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    cursor: pointer;
+    gap: 1px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    .username {
+      font-weight: bold;
+    }
+    .userHandle {
+      color: rgb(186, 185, 185);
+      align-self: center;
+    }
+  }
+}
+
+.post_content {
+  .post_body {
+    margin: 0;
+    padding-top: 6px;
+    font-size: 14px;
+    color: rgb(15, 20, 25);
+    line-height: 1.3;
+  }
+
+  .post_utils {
+    display: flex;
+    padding-top: 15px;
+    // justify-content: space-evenly;
+    gap: 6vw;
+  }
+}
+
+.postIcons {
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 450ms;
+
+  &:hover {
+    background: rgba($color, $alpha: 0.2);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+
+    .iconChild {
+      // fill: $color;
+      fill: rgb(96, 96, 96);
+    }
+  }
+}
+
+.commentIcon,
+.shareIcon {
+  &:hover {
+    background: rgba($color, $alpha: 0.3);
+    .icon {
+      .iconChild {
+        fill: $color;
+      }
+    }
+  }
+}
+.retweetIcon {
+  $color: rgb(34, 196, 71);
+  &:hover {
+    background: rgba($color, $alpha: 0.2);
+    .icon {
+      .iconChild {
+        fill: $color;
+      }
+    }
+  }
+}
+.likeIcon {
+  $color: rgb(228, 63, 135);
+  &:hover {
+    background: rgba($color, $alpha: 0.2);
+    .icon {
+      .iconChild {
+        fill: $color;
+      }
+    }
+  }
+}
+
+// post bio styles

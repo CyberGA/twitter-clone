@@ -1,0 +1,16 @@
+@import "../../index.scss";
+
+.container {
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 400ms;
+
+  &:hover{
+      background: rgba($color, $alpha: 0.2);
+  }
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
