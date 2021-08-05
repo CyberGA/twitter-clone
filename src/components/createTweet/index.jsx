@@ -9,7 +9,7 @@ export default function CreateTweet({ onTweetAdded }) {
   const [post, setPost] = useState({ tweet: "" });
   const [tweetMsg, setTweetMsg] = useState("");
 
-  const { token, user } = useAuth();
+  const { user } = useAuth();
 
   function onChange(e) {
     const name = e.target.name;
