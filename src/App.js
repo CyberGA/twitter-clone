@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import AuthProvider from "./Providers/useAuth";
+import AuthProvider from "./providers/useAuth";
 import Guard from "./routes/guard";
 
 function App() {

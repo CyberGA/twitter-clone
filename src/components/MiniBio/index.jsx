@@ -1,7 +1,7 @@
 import React from "react";
 import scssStyle from "./style.module.scss";
 import defaultPics from "../../assets/images/user.png";
-import { useAuth } from './../../Providers/useAuth';
+import { useAuth } from './../../providers/useAuth';
 
 export default function MiniBio({ ...props }) {
 

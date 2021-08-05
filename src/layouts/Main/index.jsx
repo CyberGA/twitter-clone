@@ -4,7 +4,7 @@ import _style from "./style.module.scss";
 import Post from "../../components/Post/Post";
 import topTweet from "../../assets/images/topTweet_blue.svg";
 import CreateTweet from "../../components/createTweet";
-import { useAuth } from "./../../Providers/useAuth";
+import { useAuth } from "./../../providers/useAuth";
 import { HOST } from "../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
@@ -43,7 +43,7 @@ export default function Main() {
     if (isLoggerIn) {
       getTweets();
     }
-    setIsTweetAdded(false)
+    setIsTweetAdded(false);
   }, [isLoggerIn, isTweetAdded]);
 
   return (
@@ -70,9 +70,11 @@ export default function Main() {
         {tweets.map((tweet) => (
           <Post
             key={tweet.id}
+            id={tweet.id}
             content={tweet.content}
             username={tweet.author}
-            userHandle={tweet.handle} src={tweet.profilePics}
+            userHandle={tweet.handle}
+            src={tweet.profilePics}
           />
         ))}
       </div>

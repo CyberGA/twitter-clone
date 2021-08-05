@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Form from "../../components/Form";
 import { HOST } from "../../config";
-import { useAuth } from "./../../Providers/useAuth";
+import { useAuth } from "./../../providers/useAuth";
 
 export default function Login() {
   const history = useHistory();
@@ -32,13 +32,13 @@ export default function Login() {
 
       const headers = { "Content-Type": "application/json" };
 
-      const {msg, data} = await fetch(url, {
+      const {error, data} = await fetch(url, {
         method: "POST",
         body: payload,
         headers,
       }).then((e) => e.json());
 
-      alert(msg);
+      alert(error.message);
 
       updateAuth(data.token, data.user)
 

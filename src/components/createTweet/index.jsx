@@ -2,7 +2,7 @@ import React from "react";
 import tweetStyle from "./style.module.scss";
 import DP from "../DP";
 import { useState } from "react";
-import { useAuth } from "../../Providers/useAuth";
+import { useAuth } from "../../providers/useAuth";
 import { HOST } from "../../config";
 
 export default function CreateTweet({ onTweetAdded }) {

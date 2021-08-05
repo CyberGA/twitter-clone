@@ -106,6 +106,12 @@
 }
 .likeIcon {
   $color: rgb(228, 63, 135);
+
+  .likeIconFilled{
+    color: $color;
+    font-size: larger;
+  }
+  
   &:hover {
     background: rgba($color, $alpha: 0.2);
     .icon {

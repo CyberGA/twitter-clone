@@ -19,7 +19,7 @@ import MiniBio from "../../components/MiniBio";
 import { useState } from "react";
 import defaultPics from "../../assets/images/user.png";
 import tweetFeather from '../../assets/images/tweet.svg'
-import { useAuth } from './../../Providers/useAuth';
+import { useAuth } from './../../providers/useAuth';
 
 export default function Navigation() {
   const [docSize, setDocSize] = useState(window.innerWidth);

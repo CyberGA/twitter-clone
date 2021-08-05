@@ -1,5 +1,5 @@
 import { Redirect } from "react-router-dom";
-import { useAuth } from "../Providers/useAuth";
+import { useAuth } from "../providers/useAuth";
 
 export default function Guard(props) {
   const { isLoggerIn } = useAuth();

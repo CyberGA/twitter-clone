@@ -5,7 +5,7 @@ import whiteTwitterLogo from "../../assets/images/twitter-white.svg";
 import FormEntry from "../../components/FormEntry/index";
 import FooterContainer from "../../layouts/Footer";
 import { useHistory } from "react-router-dom";
-import { useAuth } from "./../../Providers/useAuth";
+import { useAuth } from "./../../providers/useAuth";
 import SplashScreen from "../../components/SplashScreen/index";
 
 export default function LandingPage() {
