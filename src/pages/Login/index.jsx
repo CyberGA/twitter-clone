@@ -32,19 +32,19 @@ export default function Login() {
 
       const headers = { "Content-Type": "application/json" };
 
-      const {error, data} = await fetch(url, {
+      const {msg, data} = await fetch(url, {
         method: "POST",
         body: payload,
         headers,
       }).then((e) => e.json());
 
-      alert(error.message);
+      alert(msg);
 
       updateAuth(data.token, data.user)
 
       history.push("/home");
     } catch (error) {
-      alert("An error occurred, please try again");
+      console.log(error);
     }
   }
 
