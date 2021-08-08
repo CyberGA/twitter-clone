@@ -2,8 +2,11 @@
 @import "../../index.scss";
 
 .main {
-  border: 1px solid rgb(210, 210, 210);
+  $borderClr: rgba(210, 210, 210, 0.455);
+
+  border: 1px solid $borderClr;
   border-top: none;
+  border-bottom: none;
   position: relative;
   top: 0;
   min-height: 100%;
@@ -18,7 +21,7 @@
     font-size: 16px;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(210, 210, 210);
+    border-bottom: 1px solid $borderClr;
     width: 100%;
     position: -webkit-sticky;
     position: sticky;
@@ -29,6 +32,12 @@
       align-items: center;
       justify-content: center;
       gap: 1rem;
+
+      & .picsContainer {
+        @media screen and (min-width: 576px) {
+          display: none;
+        }
+      }
     }
 
     .headerIcon {
@@ -60,9 +69,51 @@
   }
 
   .createTweetContainer {
-
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 575px) {
       display: none;
     }
   }
+
+  .navContainerMobile {
+    // border-top: 1px solid $borderClr;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 1px 10px -4px rgba($color, $alpha: 1);
+
+    .navMobile {
+      width: 100%;
+      text-align: center;
+      color: rgb(77, 75, 75);
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    .navContainerMobile {
+      display: none;
+    }
+    .mobileCreateTweetBtn {
+      display: none;
+    }
+  }
+
+  .mobileCreateTweetBtn{
+    position: fixed;
+    left: 82%;
+    bottom: 60px;
+    z-index: 5;
+    text-align: center;
+    padding: 12px;
+    border-radius: 50%;
+    color: #fff;
+    background: $color;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px -4px rgba($color, $alpha: 1.0);
+
+
+    .tweetfeatherBtn {
+      width: 25px;
+    }
+  }
+
+  
 }

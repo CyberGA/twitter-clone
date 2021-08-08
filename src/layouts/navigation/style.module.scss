@@ -28,8 +28,8 @@
     }
   }
 
-  @media screen and (max-width: 576px) {
-      display: none;
+  @media screen and (max-width: 575px) {
+    display: none;
   }
 }
 .nav {
@@ -64,7 +64,8 @@
       align-self: center;
     }
 
-    .tweetBtn, .tweetfeatherBtn {
+    .tweetBtn,
+    .tweetfeatherBtn {
       color: #fff;
       background: $color;
       padding: 10px;
@@ -81,26 +82,42 @@
       width: 40px;
       object-fit: contain;
       align-self: center;
+      display: none;
     }
-  }
 
-  .navItem {
-    padding: 10px;
-    font-size: 1.1em;
-    cursor: pointer;
-    width: fit-content;
-    font-weight: 700;
-    display: flex;
-    gap: 15px;
-    border-radius: 40px;
-    transition: all 450ms;
-    align-items: center;
-    margin-bottom: 5px;
-
-    &:hover {
-      background: rgba($color, $alpha: 0.2);
-      color: $color;
+    .navItem {
+      padding: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      width: fit-content;
+      font-weight: 700;
+      display: flex;
+      gap: 15px;
       border-radius: 40px;
+      transition: all 450ms;
+      align-items: center;
+      margin-bottom: 5px;
+
+      &:hover {
+        background: rgba($color, $alpha: 0.2);
+        color: $color;
+        border-radius: 40px;
+      }
+    }
+
+    @media screen and (max-width: 1281px) {
+      .navItem {
+        & span {
+          display: none;
+        }
+      }
+
+      .tweetBtn {
+        display: none;
+      }
+      .tweetfeatherBtn {
+        display: block;
+      }
     }
   }
 }
@@ -108,7 +125,7 @@
 .dp {
   background: #ccc;
   border-radius: 50%;
-  border: 4px solid #373737;
+  box-shadow: 1px 1px 12px -8px #000;
   width: 40px;
   object-fit: contain;
 }

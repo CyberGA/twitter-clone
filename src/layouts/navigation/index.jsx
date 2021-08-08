@@ -42,39 +42,39 @@ export default function Navigation() {
           <ul>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faHome} />
-              {docSize > size ? <span>Home</span> : <></>}
+              <span>Home</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faHashtag} />
-              {docSize > size ? <span>Explore</span> : <></>}
+              <span>Explore</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faBell} />
-              {docSize > size ? <span>Notifications</span> : <></>}
+              <span>Notifications</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faEnvelope} />
-              {docSize > size ? <span>Messages</span> : <></>}
+              <span>Messages</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faBookmark} />
-              {docSize > size ? <span>Bookmarks</span> : <></>}
+              <span>Bookmarks</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faListAlt} />
-              {docSize > size ? <span>Lists</span> : <></>}
+              <span>Lists</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faUser} />
-              {docSize > size ? <span>Profile</span> : <></>}
+              <span>Profile</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faEllipsisH} />
-              {docSize > size ? <span>More</span> : <></>}
+              <span>More</span>
             </li>
           </ul>
 
-          {docSize > size ? <button className={style.tweetBtn}>Tweet</button> : <img src={tweetFeather} className={style.tweetfeatherBtn} alt="tweet" />}
+          <button className={style.tweetBtn}>Tweet</button> <img src={tweetFeather} className={style.tweetfeatherBtn} alt="tweet" />
           
         </div>
       </div>

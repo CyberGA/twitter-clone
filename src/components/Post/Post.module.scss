@@ -8,9 +8,15 @@
   display: flex;
   gap: 10px;
   width: 100%;
+  margin-bottom: 3em;
+
+    @media screen and (min-width: 576px) {
+      margin-bottom: none;
+    }
 
   &:last-of-type {
     border-bottom: none;
+    
   }
 }
 

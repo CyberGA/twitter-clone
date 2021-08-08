@@ -1,11 +1,11 @@
 import React from "react";
-import style from "./style.module.scss";
 import Main from "../../layouts/Main";
 import Navigation from "../../layouts/navigation";
 import Sidebar from "../../layouts/sidebar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import style from "./style.module.scss";
 
 export default function Home() {
   return (
