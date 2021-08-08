@@ -1,27 +1,25 @@
 @import "../../index.scss";
 
 .wrapper {
-  display: grid;
-  height: 100%;
+  // display: grid;
+  min-height: 100vh;
+  background: #fff;
+  flex-direction: row-reverse;
+  
   // grid-template-rows: 9fr 1fr;
-  grid-template-rows: auto;
+  // grid-template-rows: auto;
+}
+
+.poster {
+  min-height: 90vh;
 }
 .container {
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-template-columns: 1fr 1fr;
-
-  @media screen and (max-width: 900px) {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+  padding: 0;
 }
 
 .magazine {
   margin: 0;
-  height: 100vh;
-  max-height: 600px;
+  height: 100%;
   background-image: url("../../assets/images/twitter-home.png");
   background-position: left top;
   background-size: cover;
@@ -29,15 +27,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  padding: 8em 0;
 }
 
 .footer {
-  width: 100%;
   background: #fff;
-  padding: 20px 20px 5px;
   text-align: center;
+  min-height: 9vh;
+  padding-top: 0.8vh;
 }
+
 
 .pane {
   width: 50%;

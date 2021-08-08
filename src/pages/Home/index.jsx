@@ -3,25 +3,26 @@ import style from "./style.module.scss";
 import Main from "../../layouts/Main";
 import Navigation from "../../layouts/navigation";
 import Sidebar from "../../layouts/sidebar";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 
 export default function Home() {
-
   return (
     <>
-        {/* <Route exact path="/home/tweet/comment">
-          <div className={style.comment}>
-            <div className={style.commentWrapper}>
-              <Post />
-            </div>
-          </div>
-        </Route> */}
-
-
-        <div className={style.container}>
-          <Navigation />
-          <Main />
-          <Sidebar />
-        </div>
+      <Container fluid>
+        <Row className={style.container}>
+          <Col xs={12} sm={3} lg={3}>
+            <Navigation />
+          </Col>
+          <Col xs={12} sm={9} lg={5}>
+            <Main />
+          </Col>
+          <Col xs={12} sm={3} lg={4}>
+            <Sidebar />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

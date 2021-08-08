@@ -8,11 +8,12 @@ import { useAuth } from "./../../providers/useAuth";
 import { HOST } from "../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
+import DP from "./../../components/DP/index";
 
 export default function Main() {
   const [tweets, setTweets] = useState([]);
 
-  const { isLoggerIn, logOut } = useAuth();
+  const { isLoggerIn, logOut, user } = useAuth();
 
   const [isTweetAdded, setIsTweetAdded] = useState(false);
 
@@ -49,7 +50,10 @@ export default function Main() {
   return (
     <main className={_style.main}>
       <header className={_style.header}>
-        <span>Home</span>
+        <div className={_style.titleContainer}>
+          <DP src={user.profilePics} width={25} />
+          <span>Home</span>
+        </div>
         <div className={_style.headerIcon}>
           <img
             src={topTweet}
@@ -62,22 +66,23 @@ export default function Main() {
           </div>
         </div>
       </header>
-      <div className={_style.postContainer}>
+
+      <div className={_style.createTweetContainer}>
         <CreateTweet onTweetAdded={tweetIsAdded} />
-
-        {/* content username userHandle */}
-
-        {tweets.map((tweet) => (
-          <Post
-            key={tweet.id}
-            id={tweet.id}
-            content={tweet.content}
-            username={tweet.author}
-            userHandle={tweet.handle}
-            src={tweet.profilePics}
-          />
-        ))}
       </div>
+
+      {/* content username userHandle */}
+
+      {tweets.map((tweet) => (
+        <Post
+          key={tweet.id}
+          id={tweet.id}
+          content={tweet.content}
+          username={tweet.author}
+          userHandle={tweet.handle}
+          src={tweet.profilePics}
+        />
+      ))}
     </main>
   );
 }

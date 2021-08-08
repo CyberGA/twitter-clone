@@ -2,7 +2,6 @@
 @import "../../index.scss";
 
 .container {
-  min-height: 661px;
   height: 100vh;
   width: auto;
   display: flex;
@@ -27,6 +26,10 @@
 
       cursor: pointer;
     }
+  }
+
+  @media screen and (max-width: 576px) {
+      display: none;
   }
 }
 .nav {
@@ -57,6 +60,10 @@
     flex-direction: column;
     gap: 5px;
 
+    & > ul {
+      align-self: center;
+    }
+
     .tweetBtn, .tweetfeatherBtn {
       color: #fff;
       background: $color;
@@ -78,8 +85,8 @@
   }
 
   .navItem {
-    padding: 15px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 1.1em;
     cursor: pointer;
     width: fit-content;
     font-weight: 700;

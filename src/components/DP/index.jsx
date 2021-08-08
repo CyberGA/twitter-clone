@@ -5,7 +5,7 @@ import dpStyles from './style.module.scss'
 export default function DP({...props}) {
     return (
         <div>
-            <img src={props.src || defaultPics} alt="user-pics" className={dpStyles.dp} />
+            <img src={props.src || defaultPics} alt="user-pics" className={dpStyles.dp} width={ props.width || 40} />
         </div>
     )
 }
