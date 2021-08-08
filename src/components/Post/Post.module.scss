@@ -3,14 +3,20 @@
 .post-wrapper {
   margin: 10px 0px;
   background-color: #f3f3f325;
-  padding: 5px 15px;
+  padding: 5px 20px;
   border-bottom: 1px solid rgb(225, 221, 221);
   display: flex;
   gap: 10px;
   width: 100%;
+  margin-bottom: 3em;
+
+    @media screen and (min-width: 576px) {
+      margin-bottom: none;
+    }
 
   &:last-of-type {
     border-bottom: none;
+    
   }
 }
 
@@ -56,8 +62,7 @@
   .post_utils {
     display: flex;
     padding-top: 15px;
-    // justify-content: space-evenly;
-    gap: 6vw;
+    // justify-content: space-around;
   }
 }
 
@@ -66,6 +71,10 @@
   cursor: pointer;
   border-radius: 50%;
   transition: all 450ms;
+
+  &:not(:last-of-type) {
+    margin-right: 3vw;
+  }
 
   &:hover {
     background: rgba($color, $alpha: 0.2);
