@@ -3,25 +3,16 @@
 .createTweetContainer {
   padding: 0;
 
-  .createTweetWrapper {
-    border-bottom: 1px solid $borderClr;
-    width: 100%;
-
     .createTweetHeader {
-      display: flex;
-      padding: 10px;
-      justify-content: space-between;
-      align-items: center;
+      border-bottom: 1px solid $borderClr;
+      width: 100%;
       color: $color;
+      padding: 11px;
 
-      .createTweetBtn {
-        padding: 6px 12px;
-        background: $color;
-        color: #fff;
-        border-radius: 30px;
+      a {
+        padding-left: 10px;
       }
     }
-  }
 }
 @media screen and (min-width: 576px) {
   .createTweetContainer {
