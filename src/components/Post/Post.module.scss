@@ -10,13 +10,12 @@
   width: 100%;
   margin-bottom: 3em;
 
-    @media screen and (min-width: 576px) {
-      margin-bottom: none;
-    }
+  @media screen and (min-width: 576px) {
+    margin-bottom: none;
+  }
 
   &:last-of-type {
     border-bottom: none;
-    
   }
 }
 
@@ -76,10 +75,6 @@
     margin-right: 3vw;
   }
 
-  &:hover {
-    background: rgba($color, $alpha: 0.2);
-  }
-
   .icon {
     width: 20px;
     height: 20px;
@@ -88,6 +83,12 @@
       // fill: $color;
       fill: rgb(96, 96, 96);
     }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .postIcons:hover {
+    background: rgba($color, $alpha: 0.2);
   }
 }
 
@@ -116,11 +117,11 @@
 .likeIcon {
   $color: rgb(228, 63, 135);
 
-  .likeIconFilled{
+  .likeIconFilled {
     color: $color;
     font-size: larger;
   }
-  
+
   &:hover {
     background: rgba($color, $alpha: 0.2);
     .icon {

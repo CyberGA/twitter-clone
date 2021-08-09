@@ -44,7 +44,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 15px;
+      gap: 25px;
       cursor: pointer;
 
       img.topTweets {
@@ -59,9 +59,11 @@
         transition: all 450ms;
         color: rgb(220, 63, 63);
 
-        &:hover {
-          background: rgba(152, 48, 48, 0.571);
-          color: #fff;
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background: rgba(152, 48, 48, 0.571);
+            color: #fff;
+          }
         }
       }
     }
@@ -83,6 +85,7 @@
       width: 100%;
       text-align: center;
       color: rgb(77, 75, 75);
+      font-size: 18px;
     }
   }
 
