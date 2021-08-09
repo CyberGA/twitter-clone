@@ -10,7 +10,6 @@ import {
   faHome,
   faPowerOff,
   faSearch,
-  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { faBell, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import DP from "./../../components/DP/index";
@@ -19,19 +18,31 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import _style from "./style.module.scss";
-import { Nav, Navbar } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import { Redirect, Link } from "react-router-dom";
 
 export default function Main() {
   const [tweets, setTweets] = useState([]);
 
-  const [currentPageName, setCurrentPageName] = useState(window.location.pathname)
+  const changeActive = (e) => {
+    const clickedIcon = e.target.parentElement;
+
+    // if(e.target.tagName === "path") {
+    //   console.log("true");
+    // }
+  };
+
+  const goToExplore = (e) => {
+    return <Redirect to="/home/explore" />;
+  };
 
   const { isLoggerIn, logOut, user } = useAuth();
 
   const [isTweetAdded, setIsTweetAdded] = useState(false);
 
   function tweetIsAdded() {
-    setIsTweetAdded(true);
+    setIsTweetAdded(!isTweetAdded);
   }
 
   async function getTweets() {
@@ -61,8 +72,6 @@ export default function Main() {
     }
   }
 
-
-
   useEffect(() => {
     // console.log(isTweetAdded);
     if (isLoggerIn) {
@@ -70,10 +79,6 @@ export default function Main() {
     }
     setIsTweetAdded(false);
   }, [isLoggerIn, isTweetAdded]);
-
-  useEffect(() => {
-    
-  }, [currentPageName])
 
   return (
     <main className={_style.main}>
@@ -115,26 +120,35 @@ export default function Main() {
         />
       ))}
 
-      <div className={_style.mobileCreateTweetBtn}>
-        <img
-          src={tweetFeather}
-          className={_style.tweetfeatherBtn}
-          alt="tweet"
-        />
-      </div>
+      <Link to="/compose/tweet">
+        <div className={_style.mobileCreateTweetBtn}>
+          <img
+            src={tweetFeather}
+            className={_style.tweetfeatherBtn}
+            alt="tweet"
+          />
+        </div>
+      </Link>
 
-      <Navbar expand="lg" fixed="bottom" className={_style.navContainerMobile}>
+      <Navbar
+        expand="lg"
+        fixed="bottom"
+        className={_style.navContainerMobile}
+        onClick={changeActive}
+      >
         <Nav className={_style.navMobile}>
           <Container fluid>
             <Row>
               <Col>
-                <FontAwesomeIcon icon={faHome} />
+                <Link to="/home">
+                  <FontAwesomeIcon icon={faHome} />
+                </Link>
               </Col>
               <Col>
-                <FontAwesomeIcon icon={faSearch} />
+                  <FontAwesomeIcon icon={faSearch} />
               </Col>
               <Col>
-                <FontAwesomeIcon icon={faBell} />
+                  <FontAwesomeIcon icon={faBell} />
               </Col>
               <Col>
                 <FontAwesomeIcon icon={faEnvelope} />

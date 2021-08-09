@@ -3,8 +3,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
+import Explore from "./pages/Explore";
 import AuthProvider from "./providers/useAuth";
 import Guard from "./routes/guard";
+import ComposeTweet from './pages/CreateTweet';
 
 function App() {
   return (
@@ -15,19 +17,33 @@ function App() {
               <LandingPage />
           </Route>
 
-          <Route path="/login">
+          <Route exact path="/login">
               <Login />
           </Route>
 
-          <Route path="/signup">
+          <Route exact path="/signup">
             <Signup />
           </Route>
 
-          <Route path="/home">
+          <Route exact path="/home">
             <Guard>
               <Home />
             </Guard>
           </Route>
+
+          <Route exact path="/explore">
+              <Guard>
+                <Explore />
+              </Guard>
+          </Route>
+
+          <Route exact path="/compose/tweet">
+              <Guard>
+                <ComposeTweet />
+              </Guard>
+          </Route>
+
+          <Route path="/home"/>
         </Switch>
       </Router>
     </AuthProvider>
