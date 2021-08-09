@@ -1,0 +1,30 @@
+@import "../../index.scss";
+
+.createTweetContainer {
+  padding: 0;
+
+  .createTweetWrapper {
+    border-bottom: 1px solid $borderClr;
+    width: 100%;
+
+    .createTweetHeader {
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      color: $color;
+
+      .createTweetBtn {
+        padding: 6px 12px;
+        background: $color;
+        color: #fff;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 576px) {
+  .createTweetContainer {
+    display: none;
+  }
+}

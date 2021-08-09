@@ -1,8 +1,10 @@
 @import "../../index.scss";
 
 .wrapper {
+  $borderClr: rgba(210, 210, 210, 0.455);
+
   display: flex;
-  border-bottom: 12px solid rgb(222, 222, 222);
+  border-bottom: 12px solid $borderClr;
   padding: 12px 12px 0;
   gap: 8px;
 
@@ -14,7 +16,7 @@
   width: 100%;
 
   textarea {
-    width: 100%;
+    width: 96%;
     resize: none;
     padding: 12px;
     border: none;

@@ -24,6 +24,8 @@ import { useAuth } from './../../providers/useAuth';
 export default function Navigation() {
   const [docSize, setDocSize] = useState(window.innerWidth);
 
+  const size = 1281;
+
   const {user} = useAuth()
 
   window.onresize = () => {
@@ -40,45 +42,45 @@ export default function Navigation() {
           <ul>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faHome} />
-              {docSize > 990 ? <span>Home</span> : <></>}
+              <span>Home</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faHashtag} />
-              {docSize > 990 ? <span>Explore</span> : <></>}
+              <span>Explore</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faBell} />
-              {docSize > 990 ? <span>Notifications</span> : <></>}
+              <span>Notifications</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faEnvelope} />
-              {docSize > 990 ? <span>Messages</span> : <></>}
+              <span>Messages</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faBookmark} />
-              {docSize > 990 ? <span>Bookmarks</span> : <></>}
+              <span>Bookmarks</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faListAlt} />
-              {docSize > 990 ? <span>Lists</span> : <></>}
+              <span>Lists</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faUser} />
-              {docSize > 990 ? <span>Profile</span> : <></>}
+              <span>Profile</span>
             </li>
             <li className={style.navItem}>
               <FontAwesomeIcon icon={faEllipsisH} />
-              {docSize > 990 ? <span>More</span> : <></>}
+              <span>More</span>
             </li>
           </ul>
 
-          {docSize > 990 ? <button className={style.tweetBtn}>Tweet</button> : <img src={tweetFeather} className={style.tweetfeatherBtn} alt="tweet" />}
+          <button className={style.tweetBtn}>Tweet</button> <img src={tweetFeather} className={style.tweetfeatherBtn} alt="tweet" />
           
         </div>
       </div>
 
       <div className={style.bio}>
-        {docSize > 990 ? (
+        {docSize > size ? (
           <>
             {" "}
             <MiniBio />
