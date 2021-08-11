@@ -43,7 +43,8 @@ function App() {
               </Guard>
           </Route>
 
-          <Route path="/home"/>
+          <Route path="*" component={() => "404, Not found"} />
+
         </Switch>
       </Router>
     </AuthProvider>
